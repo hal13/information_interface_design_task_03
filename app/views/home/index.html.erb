@@ -1,0 +1,34 @@
+<div class="row"></div>
+<div class="row center-align">
+  <div class="slider">
+    <ul class="slides grey lighten-3 center-align">
+      <li>
+        <img src="http://placehold.jp/400x250.png?text=sample1" class="responsive-img">
+        <div class="caption center-align">
+          <h3>画像の管理を始めましょう</h3>
+        </div>
+      </li>      
+      <li>
+        <img src="http://placehold.jp/400x250.png?text=sample2" class="responsive-img">
+        <div class="caption center-align">
+          <h3>GoogleアカウントがあればOK!</h3>
+        </div>
+      </li>      
+    </ul>
+  </div>
+</div>
+<div class="row"></div>
+
+<div class="row">
+  <div class="center-align">
+    <%= link_to task03_path, class: "waves-effect waves-light btn-large" do %>
+      <i class="right fa fa-google-plus"></i>ログインしてみる
+    <% end %>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.slider').slider({max_width: true});
+  });
+</script>
