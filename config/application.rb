@@ -16,10 +16,14 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Workspace
+module Task03
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-  end
+    # Set timezone
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+
+    # Set locale
+    I18n.enforce_available_locales = true
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ja  end
 end
